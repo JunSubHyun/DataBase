@@ -1,0 +1,32 @@
+mysqlQuery 기본2
+
+1. WHERE 절
+
+  Selete * from tableName where column = data1
+
+ -> WHERE 절은 조건절 이라고 한다
+    WHERE 뒤에 오는 조건을 붙여 데이터를 검색한다.
+    
+    
+    1_1 '=,!='
+      '=,!=' 을 붙여 column 에 일치하는 데이터를 검색한다.(!는 부정의 의미로 일치하지 않은 데이터를 검색한다)
+      ex) Selete * from tableName where column = data1
+    
+    1_2 'like'
+       'like' 는 해당 내용이 포함된 데이터를 검색한다.
+       ex) Selete * from tableName where column like '%data1%'
+    
+    1_3 '>,<,>=,<='
+       '>,<,>=,<=' 는 수학적 부등호랑 쓰임새가 같다. int형 데이터타입(숫자형 데이터타입)의 크기를 비교해서 데이터를 검색한다.
+       ex) Selete * from tableName where column > 1
+    
+    1_4 'in'
+      'in' 은 검색할 데이터들을 () 안에 넣어 () 안에 있는 데이터들을 포함한 데이터를 검색한다.
+      ex) Selete * from tableName where column in ('data1','data2','data3')
+     
+    1_5 'is null'
+       'is null' 은 문자형 데이터들을 검색할때 null(빈값)인 값을 찾는다.
+      ex) Selete * from tableName where column is null
+    
+  
+     
