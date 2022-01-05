@@ -30,3 +30,24 @@ mysqlQuery 기본2
     
   
      
+2. Join
+	Selete * from tableName left outer join tableName2 on tableName1.colunm = tableName2.colunm
+	
+-> join 은 기준 테이블의 데이터와 다른테이블의 매칭되는 데이터값(데이터 타입은 기본적으로 일치해야 한다)를 매칭시켜 
+   다른 테이블의 데이터를 쿼리문으로 함께 조회하여 쓰인다.
+   join을 사용하여 불러온 데이터는 1개의 매칭된 값만 가지고 있어야 한다.
+
+   2_1 left join
+   		left 테이블을 기준 테이블로 정하여 left 테이블의 데이터를 기준으로 join 테이블의 데이터를 가져온다.
+
+   2_2 right join
+   		right 테이블을 기준 테이블로 정하여 right 테이블의 데이터를 기준으로 join 테이블의 데이터를 가져온다.
+	
+   2_3 inner join
+   		일반적인 join 으로 테이블 두개를 합친다 라는 개념으로 사용한다.
+		on 절 대신 where 절을 사용하여 조건을 추가할수도 있다.
+		inner join 은 서로의 데이터의 공통된 데이터만 가져온다.
+		(교집합의 개념)
+   2_4 outer join
+   		outer join 은 데이터는 가져오지만, join 된 테이블의 데이터를 where 절로 조회는 할수 없다.
+		on 절에 조건을 추가하여 데이터를 간추려 가져올수 있다.
