@@ -1,0 +1,25 @@
+mysqlQuery 응용 1
+
+1. 테이블A에 있는 데이터를 INNER JOIN 을 이용해 테이블B 데이터와 매칭시켜 테이블B 의 다른 column의 데이터로 업데이트 하기
+
+	update tableA a INNER JOIN tableB b
+	on a.columnData = b.columnData set
+	a.a.columnData2 = b.a.columnData2
+
+	(where 조건절을 추가해 a 의 조건을 추가 가능)
+
+2. 테이블A에 데이터를 테이블B 로 복사
+
+	insert into tableA 
+		(columnDataA1,columnDataA2,columnDataA3)
+	SELECT 
+		columnDataB1,columnDataB2,columnDataB3
+	from tableB 
+		
+	(where 조건절을 추가해 a 의 조건을 추가 가능)
+
+3. 테이블A의 columnDataA1 필드 데이터의 ',' 값을 ''으로 치환 업데이트
+	
+	update tableA set columnDataA1 = REPLACE(columnDataA1,',','')
+					<--변경할 필드        치환함수(변경할 필드, 변경할 문자, 변경될 문자)
+
