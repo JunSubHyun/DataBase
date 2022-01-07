@@ -23,3 +23,6 @@ mysqlQuery 응용 1
 	update tableA set columnDataA1 = REPLACE(columnDataA1,',','')
 					<--변경할 필드        치환함수(변경할 필드, 변경할 문자, 변경될 문자)
 
+4. 서브쿼리를 이용한 where절
+	selete * from tableA 
+		where no = (selete no from tableB where columnData = 2)
