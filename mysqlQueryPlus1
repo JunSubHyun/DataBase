@@ -26,3 +26,7 @@ mysqlQuery 응용 1
 4. 서브쿼리를 이용한 where절
 	selete * from tableA 
 		where no = (selete no from tableB where columnData = 2)
+
+5. 서브쿼리를 이용한 from절
+	selete t.* from 
+		(select * from tableA where columDataA1 > 0) t
