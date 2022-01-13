@@ -27,7 +27,11 @@ mysqlQuery 기본2
     1_5 'is null'
        'is null' 은 문자형 데이터들을 검색할때 null(빈값)인 값을 찾는다.
       ex) Selete * from tableName where column is null
-    
+      
+    1_6 'DateType 검색'
+       'DateType' 은 부등호를 통해 이전 날 과 이후 날을 검색할 수 있다
+      ex) Selete * from tableName where column > '2022-01-01' -> '2022-01-01' 이후의 데이터
+      	  Selete * from tableName where column < '2022-01-01' -> '2022-01-01' 이전의 데이터
   
      
 2. Join
